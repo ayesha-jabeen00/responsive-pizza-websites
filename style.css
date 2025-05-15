@@ -4,10 +4,9 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  
 }
 
-#logopizza{
+#logopizza {
   font-size: 20px;
   color: #ff7043;
   margin-bottom: 15px;
@@ -20,20 +19,22 @@ header {
   z-index: 1000;
 }
 
+/* Navbar styling */
 .navbar {
   max-width: 1200px;
-  margin: auto;
+  margin: 10px auto 0 auto;
   padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background:rgb(219, 211, 211);
+  background: rgb(219, 211, 211);
   font-family: 'Segoe UI', sans-serif;
   backdrop-filter: blur(10px);
   border-radius: 12px;
-  margin-top: 10px;
+  position: relative;
 }
 
+/* Logo */
 .logo {
   font-size: 26px;
   font-weight: 700;
@@ -41,7 +42,7 @@ header {
   letter-spacing: 1px;
 }
 
-/* Links */
+/* Navigation Links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -65,7 +66,7 @@ header {
 
 /* Book Now button */
 .book-btn {
-  background-color: #f78e6e;;
+  background-color: #f78e6e;
   color: white;
   padding: 10px 20px;
   border-radius: 25px;
@@ -85,16 +86,21 @@ header {
 .menu-icon {
   display: none;
   font-size: 30px;
-  color: #fff;
+  color: #333; /* Changed from white to dark for visibility */
   cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 18px;
+  z-index: 1001;
 }
+
 
 /* Hide checkbox */
 #menu-toggle {
   display: none;
 }
 
-/* Responsive */
+/* Responsive styling */
 @media (max-width: 768px) {
   .menu-icon {
     display: block;
@@ -107,11 +113,11 @@ header {
     width: 100%;
     flex-direction: column;
     align-items: center;
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(6px);
+    background: rgba(0, 0, 0, 0.8);
     display: none;
     padding: 15px 0;
     border-radius: 0 0 12px 12px;
+    z-index: 1000;
   }
 
   #menu-toggle:checked + .menu-icon + .nav-links {
@@ -127,6 +133,12 @@ header {
   .nav-links li a {
     display: block;
     width: 100%;
+    color: white;
+  }
+
+  .nav-links li a:hover {
+    background-color: #444;
+    color: #f78e6e;
   }
 
   .nav-links .book-btn {
@@ -137,6 +149,7 @@ header {
     padding: 10px 20px;
   }
 }
+
 
 /* homepage */
 .home-page {
@@ -158,13 +171,7 @@ header {
   margin: auto;
   text-align: center;
   padding: 40px 20px;
-  background: linear-gradient(135deg, #fff3e0, #ffe0b2);
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  animation: fadeInUp 1s ease forwards;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.3s ease-in-out;
+
 }
 
 .home-text h2 {
@@ -181,13 +188,6 @@ header {
   margin-bottom: 15px;
   line-height: 1.6;
   font-family: 'Segoe UI', sans-serif;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 
@@ -224,7 +224,7 @@ header {
 
   .home-image {
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 70px;
   }
 
   .home-image img {
